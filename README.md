@@ -8,6 +8,6 @@ Try these:
 
 * `act -a lint` - run the linter
 * `act -a test` - run the linter
-* `act` - run the the entire pipeline with the default event: push
+* `act` - run the the entire pipeline with the default 'push' event
 * `act -l` - view the execution graph
 
