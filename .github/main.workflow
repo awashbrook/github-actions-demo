@@ -20,7 +20,7 @@ action "lint" {
 }
 
 action "branch-filter" {
-  needs = ["test","lint"]
+  needs = ["test", "lint"]
   uses = "actions/bin/filter@master"
   args = "branch master"
 }
@@ -29,8 +29,7 @@ action "deploy" {
   needs = ["branch-filter"]
   uses = "actions/bin/sh@master"
   args = ["env"]
-  secrets = ["PHONY_SECRET"]
   env = {
-    PHONY_ENV = "foo"
+    PHONY_ENV = "foobar"
   }
 }
